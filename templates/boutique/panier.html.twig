@@ -1,0 +1,27 @@
+{% extends "front.html.twig" %} {# impoter le fichier front qui contien l'appel a boostrap #}
+
+{% block contenu_page %}
+<h1>votre Panier</h1>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>#id</th>
+			<th>nom</th>
+			<th>prix</th>
+			<th>action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			{% for produit in panier %}
+				<td>{{ produit.id }}</td>
+				<td>{{ produit.nom }}</td>
+				<td>{{ produit.prix }}€</td>
+				<td>
+					<a href="#" class="btn btn-info">modifier</td>
+				</td>
+			</a>
+		</tr>
+	</tbody>
+</td></tr>{% endfor %}</tbody><table>{% endblock %}
